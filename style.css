@@ -1,65 +1,74 @@
-*{
-  box-sizing: border-box;   /*inclue bordure & padding ds la taille de l'élt*/
-  margin: 0;                /*del marge ext par défaut*/
-  padding: 0;               /*del espax int par défaut*/
+/* Applique à tous les éléments */
+* {
+  box-sizing: border-box; /* Inclut la bordure et le padding dans la taille totale de l'élément */
+  margin: 0;              /* Supprime les marges externes par défaut */
+  padding: 0;             /* Supprime les espacements internes par défaut */
 }
 
-body{
-  font-family: system-ui, Arial, sans-serif ;
-  line-height: 1.4;         /*hauteur des lignes pr une meilleure lisibilité*/
-  padding: 16px;
-  font-size: 1.6 rem;
+/* Corps du document */
+body {
+  font-family: system-ui, Arial, sans-serif; /* Police par défaut système + alternatives */
+  line-height: 1.4;                          /* Espace vertical entre les lignes pour lisibilité */
+  padding: 16px;                             /* Espacement interne autour du contenu */
+  font-size: 1.6rem;                         /* Taille du texte par défaut */
 }
 
-header{
-  background-color: aliceblue;
+/* En-tête */
+header {
+  background-color: #007BFF; /* Couleur de fond bleue */
+  color: white;              /* Texte en blanc */
 }
 
+/* Conteneur pour header/nav */
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex;                      /* Active flexbox */
+  justify-content: space-between;     /* Espace entre les éléments */
+  align-items: center;                 /* Aligne verticalement */
 }
 
+/* Liste du menu de navigation */
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 12px;
+  list-style: none; /* Supprime les puces */
+  display: flex;    /* Affiche les liens côte à côte */
+  gap: 12px;        /* Espacement horizontal entre les liens */
 }
 
+/* Liens de navigation */
 nav a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit;        /* Garde la couleur du texte du parent */
 }
 
-/* layout simple*/
+/* Mise en page globale */
 header, footer {
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
+  padding: 12px 0;                /* Espacement vertical */
+  border-bottom: 1px solid #eee;  /* Ligne de séparation */
 }
 
 main {
-  margin-top: 16px;
+  margin-top: 16px; /* Espace entre le header et le contenu */
 }
 
+/* Titres des sections */
 section h3 {
-  text-align: center;
+  text-align: center; /* Centre le texte */
 }
 
+/* Pied de page */
 footer {
-  background-color: beige;
+  background-color: #f5f5dc; /* Couleur de fond beige */
+  color: #333;               /* Texte foncé */
 }
 
-/* responsive: stack nav sur petit ecran */
+/* Responsive : réorganise sur petit écran */
 @media (max-width: 600px) {
   .container {
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
+    flex-direction: column;    /* Passe les éléments en colonne */
+    gap: 8px;                   /* Espace vertical entre eux */
+    align-items: flex-start;    /* Aligne à gauche */
   }
   nav ul {
-    flex-direction: column;
-    gap: 6px;
+    flex-direction: column;    /* Liens en colonne */
+    gap: 6px;                   /* Espacement vertical */
   }
 }
-
