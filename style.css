@@ -8,6 +8,11 @@ body{
   font-family: system-ui, Arial, sans-serif ;
   line-height: 1.4;         /*hauteur des lignes pr une meilleure lisibilité*/
   padding: 16px;
+  font-size: 1.6 rem;
+}
+
+header{
+  background-color: aliceblue;
 }
 
 .container {
@@ -35,6 +40,14 @@ header, footer {
 
 main {
   margin-top: 16px;
+}
+
+section h3 {
+  text-align: center;
+}
+
+footer {
+  background-color: beige;
 }
 
 /* responsive: stack nav sur petit ecran */
