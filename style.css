@@ -10,7 +10,7 @@ body {
   font-family: system-ui, Arial, sans-serif; /* Police par défaut système + alternatives */
   line-height: 1.4;                          /* Espace vertical entre les lignes pour lisibilité */
   padding: 16px;                             /* Espacement interne autour du contenu */
-  font-size: 1.6rem;                         /* Taille du texte par défaut */
+  font-size: 16px;                         /* Taille du texte par défaut */
 }
 
 /* En-tête */
@@ -22,7 +22,7 @@ header {
 /* Conteneur pour header/nav */
 .container {
   display: flex;                      /* Active flexbox */
-  justify-content: space-between;     /* Espace entre les éléments */
+  justify-content: center;     /* Espace entre les éléments */
   align-items: center;                 /* Aligne verticalement */
 }
 
@@ -39,6 +39,10 @@ nav a {
   color: inherit;        /* Garde la couleur du texte du parent */
 }
 
+nav a:hover {
+  color: rgb(31, 31, 2);
+}
+
 /* Mise en page globale */
 header, footer {
   padding: 12px 0;                /* Espacement vertical */
@@ -53,6 +57,24 @@ main {
 section h3 {
   text-align: center; /* Centre le texte */
 }
+
+button.contactBtn {
+  background-color: transparent;
+  border: 2px solid #007BFF;
+  color: #007BFF;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
+  margin-left: 20px; /* espace entre le texte et le bouton */
+}
+
+button.contactBtn:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
 
 /* Pied de page */
 footer {
