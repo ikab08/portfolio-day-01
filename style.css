@@ -1,0 +1,52 @@
+*{
+  box-sizing: border-box;   /*inclue bordure & padding ds la taille de l'élt*/
+  margin: 0;                /*del marge ext par défaut*/
+  padding: 0;               /*del espax int par défaut*/
+}
+
+body{
+  font-family: system-ui, Arial, sans-serif ;
+  line-height: 1.4;         /*hauteur des lignes pr une meilleure lisibilité*/
+  padding: 16px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* layout simple*/
+header, footer {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+main {
+  margin-top: 16px;
+}
+
+/* responsive: stack nav sur petit ecran */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
