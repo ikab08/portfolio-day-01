@@ -7,55 +7,62 @@
 
 /* Corps du document */
 body {
-  font-family: system-ui, Arial, sans-serif; /* Police par défaut système + alternatives */
-  line-height: 1.4;                          /* Espace vertical entre les lignes pour lisibilité */
-  padding: 16px;                             /* Espacement interne autour du contenu */
-  font-size: 16px;                         /* Taille du texte par défaut */
+  font-family: 'Roboto', system-ui, Arial, sans-serif;
+  color: #222; /* Texte plus foncé */
+  background-color: #fff;
+  line-height: 1.5;
+  padding: 16px;
+  font-size: 16px;
 }
 
-/* En-tête */
 header {
-  background-color: #007BFF; /* Couleur de fond bleue */
-  color: white;              /* Texte en blanc */
+  background-color: #007BFF;
+  color: white;
 }
 
-/* Conteneur pour header/nav */
 .container {
-  display: flex;                      /* Active flexbox */
-  justify-content: center;     /* Espace entre les éléments */
-  align-items: center;                 /* Aligne verticalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Liste du menu de navigation */
 nav ul {
-  list-style: none; /* Supprime les puces */
-  display: flex;    /* Affiche les liens côte à côte */
-  gap: 12px;        /* Espacement horizontal entre les liens */
+  list-style: none;
+  display: flex;
+  gap: 12px;
 }
 
-/* Liens de navigation */
 nav a {
-  text-decoration: none; /* Supprime le soulignement */
-  color: inherit;        /* Garde la couleur du texte du parent */
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: rgb(31, 31, 2);
+  color: #004a99;
 }
 
-/* Mise en page globale */
 header, footer {
-  padding: 12px 0;                /* Espacement vertical */
-  border-bottom: 1px solid #eee;  /* Ligne de séparation */
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
 }
 
 main {
-  margin-top: 16px; /* Espace entre le header et le contenu */
+  margin-top: 16px;
 }
 
-/* Titres des sections */
 section h3 {
-  text-align: center; /* Centre le texte */
+  text-align: center;
+  color: #333;
+}
+
+footer {
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
 }
 
 button.contactBtn {
@@ -67,7 +74,7 @@ button.contactBtn {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 1rem;
-  margin-left: 20px; /* espace entre le texte et le bouton */
+  margin-left: 20px;
 }
 
 button.contactBtn:hover {
@@ -75,12 +82,18 @@ button.contactBtn:hover {
   color: white;
 }
 
-
-/* Pied de page */
-footer {
-  background-color: #f5f5dc; /* Couleur de fond beige */
-  color: #333;               /* Texte foncé */
+.social-links a img {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
 }
+
+.social-links a:hover img {
+  filter: brightness(0.7);
+  transition: filter 0.3s ease;
+}
+
 
 /* Responsive : réorganise sur petit écran */
 @media (max-width: 600px) {
