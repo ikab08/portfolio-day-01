@@ -62,6 +62,12 @@ section h3 {
   color: #333;
 }
 
+.about-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 footer {
   background-color: #f8f9fa;
   color: #333;
